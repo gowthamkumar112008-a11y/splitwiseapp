@@ -38,10 +38,7 @@ public class Main {
                     }
                 }
                  case 2 ->{
-                     System.out.print("Friend name: ");
-                     String friendName = input.nextLine();
-                     friends.add(friendName);
-                     System.out.println("Added " + friendName + ".");
+                    Main.addfriends(friends);
                  }
                  case 3 ->{
                     if(friends.isEmpty())
@@ -64,5 +61,13 @@ public class Main {
             }
         }
 
+    }
+    public static void addfriends(ArrayList<String> friends)
+    {
+        Scanner input=new Scanner(System.in);
+        System.out.print("Friend name: ");
+        String friendName = input.nextLine();
+        friends.add(friendName);
+        System.out.println("Added " + friendName + ".");
     }
 }
