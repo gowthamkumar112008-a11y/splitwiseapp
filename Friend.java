@@ -1,13 +1,13 @@
 package splitwiseapp;
 
 public class Friend {
-    private final String name;
-    Friend(String name)
+    private String name;
+   public Friend(String name)
     {
         this.name=name;
     }
     public String getname()
     {
-        return name;
+        return this.name;
     }
 }
