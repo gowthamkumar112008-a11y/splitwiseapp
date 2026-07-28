@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("===Splitwise Console===");
         Scanner input=new Scanner(System.in);
-        ArrayList<String> friends = new ArrayList<>();
+        ArrayList<Friend> friends = new ArrayList<>();
         boolean start=true;
         while(start) {
             System.out.println("    ==menu==");
@@ -46,8 +46,8 @@ public class Main {
                         System.out.println("no friends yet.");
                     }
                     else {
-                        for (String name : friends) {
-                            System.out.println("- " + name);
+                        for (Friend name : friends) {
+                            System.out.println("- " + name.getname());
                         }
                     }
                  }
@@ -62,12 +62,12 @@ public class Main {
         }
 
     }
-    public static void addfriends(ArrayList<String> friends)
+    public static void addfriends(ArrayList<Friend> friends)
     {
         Scanner input=new Scanner(System.in);
         System.out.print("Friend name: ");
         String friendName = input.nextLine();
-        friends.add(friendName);
+        friends.add(new Friend(friendName));
         System.out.println("Added " + friendName + ".");
     }
 }
