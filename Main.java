@@ -29,10 +29,10 @@ public class Main {
                         String payerName = input.nextLine();
                         System.out.print("Total amount Rs ? ");
                         double totalAmount = input.nextDouble();
-                        Expense expense = new Expense(payerName, totalAmount);
+                        ExpenseLine expense = new ExpenseLine(payerName, totalAmount);
                         int numFriends = friends.size();
-                        double perPersonShare = expense.getAmount() / numFriends;
-                        String expenseLine = "%s paid ₹%.2f".formatted(expense.getPayerName(), expense.getAmount());
+                        double perPersonShare = expense.perpersonshare(numFriends);
+                        String expenseLine = "%s paid ₹%.2f".formatted(expense.payerName(), expense.amount());
                         String shareLine = "Each person pays: %.2f".formatted(perPersonShare);
                         System.out.println(expenseLine);
                         System.out.println(shareLine);
