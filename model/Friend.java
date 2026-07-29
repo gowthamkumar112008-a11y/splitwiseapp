@@ -1,18 +1,14 @@
-package splitwiseapp;
+package splitwiseapp.model;
 
 public class Friend {
     private static int lastId = 0;
     private final int id;
-    private String name;
+    private final String name;
 
     public Friend(String name) {
         lastId++;
         this.id = lastId;
         this.name = name;
-    }
-
-    public String getname() {
-        return this.name;
     }
 
     public int getId() {
