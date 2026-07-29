@@ -38,17 +38,18 @@ public class Main {
                         System.out.println(shareLine);
                     }
                 }
-                 case 2 ->{
+                 case 2 ->
                     Main.addfriends(friends);
-                 }
+
                  case 3 ->{
                     if(friends.isEmpty())
                     {
                         System.out.println("no friends yet.");
                     }
                     else {
+                        System.out.println("  Id  Friends : ");
                         for (Friend name : friends) {
-                            System.out.println("- " + name.getname());
+                            System.out.println("%3d: %s".formatted(name.getId(), name.getName()));
                         }
                     }
                  }
@@ -56,9 +57,9 @@ public class Main {
                     System.out.println("Good bye....!!");
                     start=false;
                 }
-                default -> {
+                default ->
                     System.out.println("Invalid Choice.Try again");
-                }
+
             }
         }
 
@@ -68,7 +69,8 @@ public class Main {
         Scanner input=new Scanner(System.in);
         System.out.print("Friend name: ");
         String friendName = input.nextLine();
-        friends.add(new Friend(friendName));
-        System.out.println("Added " + friendName + ".");
+        Friend f=new Friend(friendName);
+        friends.add(f);
+        System.out.println("Added %s (id %d).".formatted(f.getName(), f.getId()));
     }
 }
