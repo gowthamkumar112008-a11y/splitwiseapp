@@ -51,7 +51,7 @@ public class Main {
                     else {
                         System.out.println("  Id  Friends : ");
                         for (Friend name : friends) {
-                            System.out.println("%3d: %s".formatted(name.getId(), name.getName()));
+                            System.out.println(Main.FriendDisplay.listLine(name));//same as FriendDisplay.listLine(name)
                         }
                     }
                  }
@@ -73,6 +73,16 @@ public class Main {
         String friendName = input.nextLine();
         Friend f=new Friend(friendName);
         friends.add(f);
-        System.out.println("Added %s (id %d).".formatted(f.getName(), f.getId()));
+        System.out.println(FriendDisplay.addedMessage(f));//same as Main.FriendDisplay.addedMessage(f)
+    }
+
+
+    private static class FriendDisplay {//fr.
+        static String listLine(Friend friend) {
+            return "- %d: %s".formatted(friend.getId(), friend.getName());
+        }
+        static String addedMessage(Friend friend) {
+            return "Added %s (id %d).".formatted(friend.getName(), friend.getId());
+        }
     }
 }
