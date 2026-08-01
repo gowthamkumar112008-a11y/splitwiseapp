@@ -3,8 +3,15 @@ import splitwiseapp.model.ExpenseLine;
 import splitwiseapp.model.Friend;
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Splitwise console application.
+ */
 public class Main {
+    /**
+     * Starts the Splitwise console application.
+     *
+     * @param args command-line arguments (not used)
+     */
     public static void main(String[] args) {
         System.out.println("===Splitwise Console===");
         Scanner input=new Scanner(System.in);
@@ -66,6 +73,11 @@ public class Main {
         }
 
     }
+    /**
+     * Adds a new friend to the friend list.
+     *
+     * @param friends list of friends in the application
+     */
     public static void addfriends(ArrayList<Friend> friends)
     {
         Scanner input=new Scanner(System.in);

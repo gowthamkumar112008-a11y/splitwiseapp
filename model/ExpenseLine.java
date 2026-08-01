@@ -1,5 +1,12 @@
 package splitwiseapp.model;
 
+/**
+ * Represents one expense row containing the payer and the amount.
+ *
+ * @param payerName the name of the friend who paid
+ * @param amount the amount paid
+ */
+
 public record ExpenseLine(String payerName, double amount) {
 
    public ExpenseLine{//compact const to reject negative amount
